@@ -17,9 +17,9 @@ import { string as isString } from 'vscode-languageserver/lib/utils/is';
 import { WorkDoneProgress } from 'vscode-languageserver/lib/progress';
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import { URI } from 'vscode-uri';
-import { Ruleset } from '@stoplight/spectral-core';
-import { asyncapi, oas } from '@stoplight/spectral-rulesets';
-import { fetch } from '@stoplight/spectral-runtime';
+import { Ruleset } from '@spotlight-rules/spotlight-core';
+import { asyncapi, oas } from '@spotlight-rules/spotlight-rulesets';
+import { fetch } from '@spotlight-rules/spotlight-runtime';
 import {
   ExtensionSettings,
   TextDocumentSettings,
@@ -222,7 +222,7 @@ function resolveSettings(document: TextDocument): Thenable<TextDocumentSettings>
           rulesetFile = configuration.rulesetFile;
         }
       } else {
-        // Nothing configured, load the default (.spectral.yml in the same folder as the workspace).
+        // Nothing configured, load the default (.spotlight.yml in the same folder as the workspace).
         rulesetFile = (await getDefaultRulesetFile(configuration.workspaceFolder?.uri)) ?? null;
       }
 

@@ -16,7 +16,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -32,7 +32,7 @@ Array [
       },
     ],
     "severity": "Error",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "info-contact",
@@ -48,7 +48,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "info-description",
@@ -64,7 +64,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -80,7 +80,7 @@ Array [
       },
     ],
     "severity": "Error",
-    "source": "spectral",
+    "source": "spotlight",
   },
 ]
 `;
@@ -101,7 +101,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -117,7 +117,7 @@ Array [
       },
     ],
     "severity": "Error",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "info-contact",
@@ -133,7 +133,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "info-description",
@@ -149,7 +149,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -165,7 +165,7 @@ Array [
       },
     ],
     "severity": "Error",
-    "source": "spectral",
+    "source": "spotlight",
   },
 ]
 `;

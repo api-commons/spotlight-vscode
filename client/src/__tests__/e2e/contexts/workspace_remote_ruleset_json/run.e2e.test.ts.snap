@@ -16,7 +16,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -32,7 +32,7 @@ Array [
       },
     ],
     "severity": "Hint",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "info-description",
@@ -48,7 +48,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -64,7 +64,7 @@ Array [
       },
     ],
     "severity": "Hint",
-    "source": "spectral",
+    "source": "spotlight",
   },
 ]
 `;
@@ -85,7 +85,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -101,7 +101,7 @@ Array [
       },
     ],
     "severity": "Hint",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "info-description",
@@ -117,7 +117,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "oas3-schema",
@@ -133,7 +133,7 @@ Array [
       },
     ],
     "severity": "Hint",
-    "source": "spectral",
+    "source": "spotlight",
   },
 ]
 `;

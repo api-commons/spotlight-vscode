@@ -9,7 +9,7 @@
 // across the client and server components.
 
 import { WorkspaceFolder } from 'vscode-languageserver';
-import type { Ruleset } from '@stoplight/spectral-core';
+import type { Ruleset } from '@spotlight-rules/spotlight-core';
 
 /**
  * Possible configuration values for when the Spotlight linter runs.
@@ -30,7 +30,7 @@ export interface ExtensionSettings {
 
   /**
    * Location of the ruleset file to use when validating. If omitted, the
-   * default is a .spectral.yml/.spectral.json in the same folder as the
+   * default is a .spotlight.yml/.spotlight.json in the same folder as the
    * document being validated. This is relative to the workspace folder;
    * it's not currently possible to expand predefined variables in extensions.
    * {@link https://github.com/microsoft/vscode/issues/46471|GitHub Issue}

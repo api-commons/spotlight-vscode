@@ -35,21 +35,25 @@ It is the editor companion to the API Commons "Spotlight" stack:
   (`spotlight/startWatcher`, `spotlight/validate`) on both client and server.
 - **User-facing strings and docs** referring to the product.
 
-## Deliberately **not** changed (compatibility)
+## Engine
 
-- The **linter engine** is still the upstream Spectral packages
-  (`@stoplight/spectral-core`, `-parsers`, `-ruleset-bundler`,
-  `-ruleset-migrator`, `-rulesets`). In `server/src/linter.ts` the engine class
-  is imported with an alias: `import { Spectral as Spotlight } from
-  '@stoplight/spectral-core'`. Repointing the engine at the (unpublished)
-  `@api-commons/spotlight-*` packages from spotlight-cli is future work.
-- The default **ruleset filenames** `.spectral.json` / `.spectral.yaml` /
-  `.spectral.yml` / `.spectral.js` and the `spectral:` ruleset alias scheme are
-  preserved, because they are part of the engine's behaviour and the large body
-  of existing rulesets in the wild.
+The extension embeds the published
+[`@spotlight-rules/spotlight-*`](https://www.npmjs.com/org/spotlight-rules)
+engine (core, parsers, ruleset-bundler, ruleset-migrator, rulesets) at `^1.0.0`,
+the same engine shipped by [spotlight-cli](https://github.com/api-commons/spotlight-cli).
+The engine class is imported directly as `Spotlight`. Default ruleset files are
+`.spotlight.{json,yaml,yml,js}` and built-in rulesets use the `spotlight:`
+aliases — consistent with the rest of the Spotlight stack.
+
+## Not changed (attribution — required)
+
+- `LICENSE.txt`, `NOTICE`, and the "derived from Stoplight's vscode-spectral"
+  provenance stay as-is, per the Apache License.
+- External `@stoplight/*` utility dependencies (`@stoplight/path`,
+  `@stoplight/json-ref-resolver`, etc.) are unrelated libraries and keep their
+  names.
 
 ## Changes from upstream
 
-- **2026-06-23** — Initial import and rebrand as described above. The extension
-  icon (`icon.png`) and screenshots are still the upstream Spectral artwork;
-  replacing the artwork is future work.
+- **2026-06-23** — Initial import and rebrand. The extension icon (`icon.png`)
+  and screenshots are still the upstream artwork; replacing them is future work.

@@ -7,9 +7,9 @@ const vscode_languageserver_1 = require("vscode-languageserver");
 const is_1 = require("vscode-languageserver/lib/utils/is");
 const vscode_languageserver_textdocument_1 = require("vscode-languageserver-textdocument");
 const vscode_uri_1 = require("vscode-uri");
-const spectral_core_1 = require("@stoplight/spectral-core");
-const spectral_rulesets_1 = require("@stoplight/spectral-rulesets");
-const spectral_runtime_1 = require("@stoplight/spectral-runtime");
+const spotlight_core_1 = require("@spotlight-rules/spotlight-core");
+const spotlight_rulesets_1 = require("@spotlight-rules/spotlight-rulesets");
+const spotlight_runtime_1 = require("@spotlight-rules/spotlight-runtime");
 const linter_1 = require("./linter");
 const notifications_1 = require("./notifications");
 const queue_1 = require("./queue");
@@ -56,7 +56,7 @@ async function getDefaultRulesetFile(dirpath) {
         return;
     try {
         for (const filename of await fs.promises.readdir(workspaceFolderFs)) {
-            if (spectral_core_1.Ruleset.isDefaultRulesetFile(filename)) {
+            if (spotlight_core_1.Ruleset.isDefaultRulesetFile(filename)) {
                 return path.join(workspaceFolderFs, filename);
             }
         }
@@ -141,7 +141,7 @@ function resolveSettings(document) {
                 connection.sendNotification(notifications_1.StartWatcherNotification.type, { path: rulesetFile });
             }
             try {
-                const { ruleset, dependencies } = await linter_1.Linter.loadRuleset(rulesetFile, { fs, fetch: spectral_runtime_1.fetch });
+                const { ruleset, dependencies } = await linter_1.Linter.loadRuleset(rulesetFile, { fs, fetch: spotlight_runtime_1.fetch });
                 for (const dependency of dependencies) {
                     connection.sendNotification(notifications_1.StartWatcherNotification.type, { path: dependency });
                 }
@@ -152,8 +152,8 @@ function resolveSettings(document) {
             }
         }
         else {
-            settings.ruleset = new spectral_core_1.Ruleset({
-                extends: [spectral_rulesets_1.oas, spectral_rulesets_1.asyncapi],
+            settings.ruleset = new spotlight_core_1.Ruleset({
+                extends: [spotlight_rulesets_1.oas, spotlight_rulesets_1.asyncapi],
             });
         }
         return settings;

@@ -1,8 +1,8 @@
 /* eslint-disable require-jsdoc */
 import { expect } from 'chai';
 
-import type { IRuleResult } from '@stoplight/spectral-core';
-import { DiagnosticSeverity as SpectralDiagnosticSeverity } from '@stoplight/types';
+import type { IRuleResult } from '@spotlight-rules/spotlight-core';
+import { DiagnosticSeverity as SpotlightDiagnosticSeverity } from '@stoplight/types';
 import { makeDiagnostic, makePublishDiagnosticsParams } from '../../src/util';
 import { DiagnosticSeverity as VSCodeDiagnosticSeverity } from 'vscode-languageserver';
 
@@ -24,7 +24,7 @@ function createResult(source?: string): IRuleResult {
     source,
     code: 'rule-name',
     message: 'message',
-    severity: SpectralDiagnosticSeverity.Error,
+    severity: SpotlightDiagnosticSeverity.Error,
   };
 }
 
@@ -35,15 +35,15 @@ describe('makeDiagnostic', () => {
     expect(actual.source).to.eql('spotlight');
   });
 
-  const testCases: [SpectralDiagnosticSeverity, VSCodeDiagnosticSeverity][] = [
-    [SpectralDiagnosticSeverity.Error, VSCodeDiagnosticSeverity.Error],
-    [SpectralDiagnosticSeverity.Warning, VSCodeDiagnosticSeverity.Warning],
-    [SpectralDiagnosticSeverity.Information, VSCodeDiagnosticSeverity.Information],
-    [SpectralDiagnosticSeverity.Hint, VSCodeDiagnosticSeverity.Hint],
+  const testCases: [SpotlightDiagnosticSeverity, VSCodeDiagnosticSeverity][] = [
+    [SpotlightDiagnosticSeverity.Error, VSCodeDiagnosticSeverity.Error],
+    [SpotlightDiagnosticSeverity.Warning, VSCodeDiagnosticSeverity.Warning],
+    [SpotlightDiagnosticSeverity.Information, VSCodeDiagnosticSeverity.Information],
+    [SpotlightDiagnosticSeverity.Hint, VSCodeDiagnosticSeverity.Hint],
   ];
 
   testCases.forEach(([input, expected]) => {
-    it(`converts Spectral severity to VSCode severity (${input} => ${expected})`, () => {
+    it(`converts Spotlight severity to VSCode severity (${input} => ${expected})`, () => {
       const result = createResult();
       result.severity = input;
 

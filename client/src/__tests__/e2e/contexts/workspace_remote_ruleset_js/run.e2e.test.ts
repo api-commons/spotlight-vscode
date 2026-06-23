@@ -11,7 +11,7 @@ import { workspace } from 'vscode';
 import * as httpTestServers from 'http-test-servers';
 
 // set up our remote rules url using http-test-servers
-const responseBody = `import { oas } from '@stoplight/spectral-rulesets';
+const responseBody = `import { oas } from '@spotlight-rules/spotlight-rulesets';
 
 var _migratedRuleset = {
   "extends": oas,
@@ -25,8 +25,8 @@ export { _migratedRuleset as default };
 `;
 
 const routes = {
-  spectralJs: {
-    route: '/.spectral.js',
+  spotlightJs: {
+    route: '/.spotlight.js',
     method: 'get',
     statusCode: 200,
     response: responseBody,
@@ -34,7 +34,7 @@ const routes = {
 };
 
 const servers = {
-  spectralJs: {
+  spotlightJs: {
     port: 3006,
     delay: 1000,
   },
@@ -46,7 +46,7 @@ suiteSetup(async () => {
     console.log('Staring test servers on port 3006...');
   });
   chaiJestSnapshot.resetSnapshotRegistry();
-  setRulesetFile('http://localhost:3006/.spectral.js');
+  setRulesetFile('http://localhost:3006/.spotlight.js');
   setValidateFiles([]);
 
   await activate();

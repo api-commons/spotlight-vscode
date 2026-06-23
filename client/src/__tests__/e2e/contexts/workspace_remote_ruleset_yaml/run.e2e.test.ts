@@ -12,15 +12,15 @@ import * as httpTestServers from 'http-test-servers';
 
 // set up our remote rules url using http-test-servers
 const responseBody = `---
-extends: 'spectral:oas'
+extends: 'spotlight:oas'
 rules:
   oas3-schema: hint
   info-contact: 'off'
 `;
 
 const routes = {
-  spectralJs: {
-    route: '/spectral.yaml',
+  spotlightJs: {
+    route: '/spotlight.yaml',
     method: 'get',
     statusCode: 200,
     response: responseBody,
@@ -28,7 +28,7 @@ const routes = {
 };
 
 const servers = {
-  spectralJs: {
+  spotlightJs: {
     port: 3006,
     delay: 1000,
   },
@@ -40,7 +40,7 @@ suiteSetup(async () => {
     console.log('Staring test servers on port 3006...');
   });
   chaiJestSnapshot.resetSnapshotRegistry();
-  setRulesetFile('http://localhost:3006/spectral.yaml');
+  setRulesetFile('http://localhost:3006/spotlight.yaml');
   setValidateFiles([]);
 
   await activate();

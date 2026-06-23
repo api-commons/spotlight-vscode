@@ -16,7 +16,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "valid-document-version",
@@ -32,7 +32,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
 ]
 `;
@@ -53,7 +53,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
   Object {
     "code": "valid-document-version",
@@ -69,7 +69,7 @@ Array [
       },
     ],
     "severity": "Warning",
-    "source": "spectral",
+    "source": "spotlight",
   },
 ]
 `;

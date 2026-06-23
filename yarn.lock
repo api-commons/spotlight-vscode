@@ -154,6 +154,156 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@spotlight-rules/spotlight-core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-core/-/spotlight-core-1.0.0.tgz#1adbb0e422a0ddb4d8a2ac841a4cc5eec61960fd"
+  integrity sha512-LoZt3i2LC2KpgIFDI7dGtK1yuPxzBFf5F9nbVkEMNMelpMKA0HPvedOGVrLCOTfM2XaCmdF8w5xsQNrHLS9lAA==
+  dependencies:
+    "@spotlight-rules/spotlight-parsers" "^1.0.0"
+    "@spotlight-rules/spotlight-ref-resolver" "^1.0.0"
+    "@spotlight-rules/spotlight-runtime" "^1.0.0"
+    "@stoplight/better-ajv-errors" "1.0.3"
+    "@stoplight/json" "~3.21.0"
+    "@stoplight/path" "1.3.2"
+    "@stoplight/types" "~13.6.0"
+    "@types/es-aggregate-error" "^1.0.2"
+    "@types/json-schema" "^7.0.11"
+    ajv "^8.18.0"
+    ajv-errors "~3.0.0"
+    ajv-formats "~2.1.1"
+    es-aggregate-error "^1.0.7"
+    expr-eval-fork "^3.0.1"
+    jsonpath-plus "^10.3.0"
+    lodash "^4.18.1"
+    lodash.topath "^4.5.2"
+    minimatch "^3.1.4"
+    nimma "0.2.3"
+    pony-cause "^1.1.1"
+    tslib "^2.8.1"
+
+"@spotlight-rules/spotlight-formats@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-formats/-/spotlight-formats-1.0.0.tgz#d71801b41ce17a083ad804c236183e045ff8b59b"
+  integrity sha512-bCsYfPHJiBQtG2A6wAHN+jTyOPG0iUlTVOuNYqy12VC/dmSeSTpK1rg9BTiP7W04KoCni9YCxqy/V0Giy8TPyA==
+  dependencies:
+    "@spotlight-rules/spotlight-core" "^1.0.0"
+    "@stoplight/json" "^3.17.0"
+    "@types/json-schema" "^7.0.7"
+    tslib "^2.8.1"
+
+"@spotlight-rules/spotlight-functions@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-functions/-/spotlight-functions-1.0.0.tgz#51a0c985e9f1be99626c431286ee93e420658bb6"
+  integrity sha512-qMG8f9oGaYc/Gy5Vj5y9OTIVPz5thy8sQetFYe26cTG1Z8mpJ6IaYqwuFoA+4zxJXPQJgWHOhFZ79cSRkEMhiA==
+  dependencies:
+    "@spotlight-rules/spotlight-core" "^1.0.0"
+    "@spotlight-rules/spotlight-formats" "^1.0.0"
+    "@spotlight-rules/spotlight-runtime" "^1.0.0"
+    "@stoplight/better-ajv-errors" "1.0.3"
+    "@stoplight/json" "^3.17.1"
+    ajv "^8.18.0"
+    ajv-draft-04 "~1.0.0"
+    ajv-errors "~3.0.0"
+    ajv-formats "~2.1.1"
+    lodash "^4.18.1"
+    tslib "^2.8.1"
+
+"@spotlight-rules/spotlight-parsers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-parsers/-/spotlight-parsers-1.0.0.tgz#9d5fec3a5819b3c62b6eacfdb072db8300cb4bda"
+  integrity sha512-tyhK3BqcuX3xeqEWnI59UuVK7+cZfYsfd2K14g2N/pCPLExwdgo8gCz+PGnOWCEJKVkJ7XEqVxyQz4q+Rq4sBQ==
+  dependencies:
+    "@stoplight/json" "~3.21.0"
+    "@stoplight/types" "^14.1.1"
+    "@stoplight/yaml" "~4.3.0"
+    tslib "^2.8.1"
+
+"@spotlight-rules/spotlight-ref-resolver@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-ref-resolver/-/spotlight-ref-resolver-1.0.0.tgz#dec5ee03bcfd41e04568d73f32505c9c06884344"
+  integrity sha512-H7lm+sZlb9jJqgqqxxUbm3TLxkKJ1pHgynxqzTWwDTfNX3Bj9ouQSEz8+yuvZA1fAMzkEPf5cEy/+L45349pwA==
+  dependencies:
+    "@spotlight-rules/spotlight-runtime" "^1.0.0"
+    "@stoplight/json-ref-readers" "1.2.2"
+    "@stoplight/json-ref-resolver" "~3.1.6"
+    dependency-graph "0.11.0"
+    tslib "^2.8.1"
+
+"@spotlight-rules/spotlight-ruleset-bundler@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-ruleset-bundler/-/spotlight-ruleset-bundler-1.0.0.tgz#06b2d4a2ee2012fd92c19e23e3f179fa6377c52f"
+  integrity sha512-H3XFR3xRJYo7E1ivKi7eM5eJmivtNwWVyi/SnDHkTli4LlqB0D4UbsGgpeeQ++f7W79MP7xaFVOkQ92Tqh7xVw==
+  dependencies:
+    "@rollup/plugin-commonjs" "~22.0.2"
+    "@spotlight-rules/spotlight-core" "^1.0.0"
+    "@spotlight-rules/spotlight-formats" "^1.0.0"
+    "@spotlight-rules/spotlight-functions" "^1.0.0"
+    "@spotlight-rules/spotlight-parsers" "^1.0.0"
+    "@spotlight-rules/spotlight-ref-resolver" "^1.0.0"
+    "@spotlight-rules/spotlight-ruleset-migrator" "^1.0.0"
+    "@spotlight-rules/spotlight-rulesets" "^1.0.0"
+    "@spotlight-rules/spotlight-runtime" "^1.0.0"
+    "@stoplight/path" "1.3.2"
+    "@stoplight/types" "^13.6.0"
+    "@types/node" "*"
+    pony-cause "1.1.1"
+    rollup "~2.80.0"
+    tslib "^2.8.1"
+    validate-npm-package-name "3.0.0"
+
+"@spotlight-rules/spotlight-ruleset-migrator@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-ruleset-migrator/-/spotlight-ruleset-migrator-1.0.0.tgz#ab63babad0b8c0782087e849c893b22f6493829c"
+  integrity sha512-psQQQNMWkpGRv4rT2JmkAdkCmrFRM15oTVBZ0lezw7D2KE/SN/Fm3ksrqDoT8jdLIuyMgQ3HcTPj3GdAXKcuBw==
+  dependencies:
+    "@spotlight-rules/spotlight-functions" "^1.0.0"
+    "@spotlight-rules/spotlight-runtime" "^1.0.0"
+    "@stoplight/json" "~3.21.0"
+    "@stoplight/ordered-object-literal" "~1.0.4"
+    "@stoplight/path" "1.3.2"
+    "@stoplight/types" "^13.6.0"
+    "@stoplight/yaml" "~4.2.3"
+    "@types/node" "*"
+    ajv "^8.18.0"
+    ast-types "0.14.2"
+    astring "^1.9.0"
+    reserved "0.1.2"
+    tslib "^2.8.1"
+    validate-npm-package-name "3.0.0"
+
+"@spotlight-rules/spotlight-rulesets@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-rulesets/-/spotlight-rulesets-1.0.0.tgz#429f9b33668d73b242dfc0cf82f7327124d99533"
+  integrity sha512-bRprSpz/IkzXr8wcWS9Vbf/aeK17VXlx5F/HmtsyXCxOoGT5zNpP3PY/C3L/QwCvtCxbHFwGWb2BDZsLT0aJSw==
+  dependencies:
+    "@asyncapi/specs" "^6.8.0"
+    "@spotlight-rules/spotlight-core" "^1.0.0"
+    "@spotlight-rules/spotlight-formats" "^1.0.0"
+    "@spotlight-rules/spotlight-functions" "^1.0.0"
+    "@spotlight-rules/spotlight-runtime" "^1.0.0"
+    "@stoplight/better-ajv-errors" "1.0.3"
+    "@stoplight/json" "^3.17.0"
+    "@stoplight/types" "^13.6.0"
+    "@types/json-schema" "^7.0.7"
+    ajv "^8.18.0"
+    ajv-formats "~2.1.1"
+    json-schema-traverse "^1.0.0"
+    leven "3.1.0"
+    lodash "^4.18.1"
+    tslib "^2.8.1"
+
+"@spotlight-rules/spotlight-runtime@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spotlight-rules/spotlight-runtime/-/spotlight-runtime-1.0.0.tgz#b98747314f7a90a6c251648197d414be806b5180"
+  integrity sha512-o5hGxAieAR1aJo47qjzWlyLOPtEIZII8kBqg2rF46cKKL1YJelOq2y6GAFKeykluJSnxEnIkoy0FjKAmgpXPWg==
+  dependencies:
+    "@stoplight/json" "^3.20.1"
+    "@stoplight/path" "^1.3.2"
+    "@stoplight/types" "^13.6.0"
+    lodash "^4.18.1"
+    node-fetch "^2.7.0"
+    tslib "^2.8.1"
+
 "@stoplight/better-ajv-errors@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@stoplight/better-ajv-errors/-/better-ajv-errors-1.0.3.tgz#d74a5c4da5d786c17188d7f4edec505f089885fa"
@@ -207,157 +357,6 @@
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@stoplight/path/-/path-1.3.2.tgz#96e591496b72fde0f0cdae01a61d64f065bd9ede"
   integrity sha512-lyIc6JUlUA8Ve5ELywPC8I2Sdnh1zc1zmbYgVarhXIp9YeAB0ReeqmGEOWNtlHkbP2DAA1AL65Wfn2ncjK/jtQ==
-
-"@stoplight/spectral-core@>=1", "@stoplight/spectral-core@^1.19.2", "@stoplight/spectral-core@^1.19.4":
-  version "1.19.4"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-core/-/spectral-core-1.19.4.tgz#15b01814ee997de43279b72368c13f91636a01f6"
-  integrity sha512-8hnZXfssTlV99SKo8J8BwMt5LsiBFHkCh0V3P7j8IPcCNl//bpG92U4TpYy7AwmUms/zCLX7sxNQC6AZ+bkfzg==
-  dependencies:
-    "@stoplight/better-ajv-errors" "1.0.3"
-    "@stoplight/json" "~3.21.0"
-    "@stoplight/path" "1.3.2"
-    "@stoplight/spectral-parsers" "^1.0.0"
-    "@stoplight/spectral-ref-resolver" "^1.0.4"
-    "@stoplight/spectral-runtime" "^1.1.2"
-    "@stoplight/types" "~13.6.0"
-    "@types/es-aggregate-error" "^1.0.2"
-    "@types/json-schema" "^7.0.11"
-    ajv "^8.17.1"
-    ajv-errors "~3.0.0"
-    ajv-formats "~2.1.0"
-    es-aggregate-error "^1.0.7"
-    jsonpath-plus "10.2.0"
-    lodash "~4.17.21"
-    lodash.topath "^4.5.2"
-    minimatch "3.1.2"
-    nimma "0.2.3"
-    pony-cause "^1.1.1"
-    simple-eval "1.0.1"
-    tslib "^2.8.1"
-
-"@stoplight/spectral-formats@^1.8.1":
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-formats/-/spectral-formats-1.8.2.tgz#d5bbdb5d0802b118c9b8f8bbf72d6f34f4248b54"
-  integrity sha512-c06HB+rOKfe7tuxg0IdKDEA5XnjL2vrn/m/OVIIxtINtBzphZrOgtRn7epQ5bQF5SWp84Ue7UJWaGgDwVngMFw==
-  dependencies:
-    "@stoplight/json" "^3.17.0"
-    "@stoplight/spectral-core" "^1.19.2"
-    "@types/json-schema" "^7.0.7"
-    tslib "^2.8.1"
-
-"@stoplight/spectral-functions@>=1", "@stoplight/spectral-functions@^1.9.1":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-functions/-/spectral-functions-1.9.3.tgz#5591845592a2cc714db05998f04f2e8051d3df91"
-  integrity sha512-jy4mguk0Ddz0Vr76PHervOZeyXTUW650zVfNT2Vt9Ji3SqtTVziHjq913CBVEGFS+IQw1McUXuHVLM6YKVZ6fQ==
-  dependencies:
-    "@stoplight/better-ajv-errors" "1.0.3"
-    "@stoplight/json" "^3.17.1"
-    "@stoplight/spectral-core" "^1.19.4"
-    "@stoplight/spectral-formats" "^1.8.1"
-    "@stoplight/spectral-runtime" "^1.1.2"
-    ajv "^8.17.1"
-    ajv-draft-04 "~1.0.0"
-    ajv-errors "~3.0.0"
-    ajv-formats "~2.1.0"
-    lodash "~4.17.21"
-    tslib "^2.8.1"
-
-"@stoplight/spectral-parsers@>=1", "@stoplight/spectral-parsers@^1.0.0":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-parsers/-/spectral-parsers-1.0.5.tgz#2febd979b2917465759c97fe7375145f86574ff2"
-  integrity sha512-ANDTp2IHWGvsQDAY85/jQi9ZrF4mRrA5bciNHX+PUxPr4DwS6iv4h+FVWJMVwcEYdpyoIdyL+SRmHdJfQEPmwQ==
-  dependencies:
-    "@stoplight/json" "~3.21.0"
-    "@stoplight/types" "^14.1.1"
-    "@stoplight/yaml" "~4.3.0"
-    tslib "^2.8.1"
-
-"@stoplight/spectral-ref-resolver@^1.0.4":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-ref-resolver/-/spectral-ref-resolver-1.0.5.tgz#2462ae79bbb90b7fcc76b014118a0beeee5e64d5"
-  integrity sha512-gj3TieX5a9zMW29z3mBlAtDOCgN3GEc1VgZnCVlr5irmR4Qi5LuECuFItAq4pTn5Zu+sW5bqutsCH7D4PkpyAA==
-  dependencies:
-    "@stoplight/json-ref-readers" "1.2.2"
-    "@stoplight/json-ref-resolver" "~3.1.6"
-    "@stoplight/spectral-runtime" "^1.1.2"
-    dependency-graph "0.11.0"
-    tslib "^2.8.1"
-
-"@stoplight/spectral-ruleset-bundler@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-ruleset-bundler/-/spectral-ruleset-bundler-1.6.1.tgz#5019dfb2d9da3188a70c4056064661d90b833971"
-  integrity sha512-Pk0OVqyHXc/grFtaOWXF268UNRjwAnSGf9idBXO1XZJbieUyrYRJ44v5/E1UVxRMvzVkQ6/As/Ggi8hsEybKZw==
-  dependencies:
-    "@rollup/plugin-commonjs" "~22.0.2"
-    "@stoplight/path" "1.3.2"
-    "@stoplight/spectral-core" ">=1"
-    "@stoplight/spectral-formats" "^1.8.1"
-    "@stoplight/spectral-functions" ">=1"
-    "@stoplight/spectral-parsers" ">=1"
-    "@stoplight/spectral-ref-resolver" "^1.0.4"
-    "@stoplight/spectral-ruleset-migrator" "^1.9.6"
-    "@stoplight/spectral-rulesets" ">=1"
-    "@stoplight/spectral-runtime" "^1.1.2"
-    "@stoplight/types" "^13.6.0"
-    "@types/node" "*"
-    pony-cause "1.1.1"
-    rollup "~2.79.2"
-    tslib "^2.8.1"
-    validate-npm-package-name "3.0.0"
-
-"@stoplight/spectral-ruleset-migrator@^1.11.1", "@stoplight/spectral-ruleset-migrator@^1.9.6":
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-ruleset-migrator/-/spectral-ruleset-migrator-1.11.1.tgz#617833fa68a0fea02e5413cf29dabbe0e05a3225"
-  integrity sha512-z2A1Ual3bU7zLDxYqdHaxYgyirb7TVDaWXc9ONEBAo5W1isio0EHV59ujAUEOUHCLcY5ubd0eYeqgSjqPIQe8w==
-  dependencies:
-    "@stoplight/json" "~3.21.0"
-    "@stoplight/ordered-object-literal" "~1.0.4"
-    "@stoplight/path" "1.3.2"
-    "@stoplight/spectral-functions" "^1.9.1"
-    "@stoplight/spectral-runtime" "^1.1.2"
-    "@stoplight/types" "^13.6.0"
-    "@stoplight/yaml" "~4.2.3"
-    "@types/node" "*"
-    ajv "^8.17.1"
-    ast-types "0.14.2"
-    astring "^1.9.0"
-    reserved "0.1.2"
-    tslib "^2.8.1"
-    validate-npm-package-name "3.0.0"
-
-"@stoplight/spectral-rulesets@>=1", "@stoplight/spectral-rulesets@^1.21.3":
-  version "1.21.3"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-rulesets/-/spectral-rulesets-1.21.3.tgz#9eeb27eb35ecf17059c6f287cf94b29c01c5e026"
-  integrity sha512-SQp/NNDykfCvgmo9DW1pBAbmyKRHhEHmsc28kuRHC6nJblGFsLyNVGkEDjSIJuviR7ooC2Y00vmf0R3OGcyhyw==
-  dependencies:
-    "@asyncapi/specs" "^6.8.0"
-    "@stoplight/better-ajv-errors" "1.0.3"
-    "@stoplight/json" "^3.17.0"
-    "@stoplight/spectral-core" "^1.19.4"
-    "@stoplight/spectral-formats" "^1.8.1"
-    "@stoplight/spectral-functions" "^1.9.1"
-    "@stoplight/spectral-runtime" "^1.1.2"
-    "@stoplight/types" "^13.6.0"
-    "@types/json-schema" "^7.0.7"
-    ajv "^8.17.1"
-    ajv-formats "~2.1.0"
-    json-schema-traverse "^1.0.0"
-    leven "3.1.0"
-    lodash "~4.17.21"
-    tslib "^2.8.1"
-
-"@stoplight/spectral-runtime@^1.1.2":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@stoplight/spectral-runtime/-/spectral-runtime-1.1.3.tgz#de18b0b08702de04f98b0fbb8c63a2f41c412dac"
-  integrity sha512-uoKSVX/OYXOEBRQN7EtAaVefl8MlyhBkDcU2aDYEGALwYXHAH+vmF3ljhZrueMA3fSWLHTL3RxWqsjeeCor6lw==
-  dependencies:
-    "@stoplight/json" "^3.20.1"
-    "@stoplight/path" "^1.3.2"
-    "@stoplight/types" "^13.6.0"
-    abort-controller "^3.0.0"
-    lodash "^4.17.21"
-    node-fetch "^2.6.7"
-    tslib "^2.8.1"
 
 "@stoplight/types@^12.3.0 || ^13.0.0", "@stoplight/types@^13.0.0", "@stoplight/types@^13.6.0":
   version "13.20.0"
@@ -802,13 +801,6 @@
   resolved "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-abort-controller@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
-  integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
-  dependencies:
-    event-target-shim "^5.0.0"
-
 accepts@~1.3.8:
   version "1.3.8"
   resolved "https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz"
@@ -849,7 +841,7 @@ ajv-errors@~3.0.0:
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-3.0.0.tgz#e54f299f3a3d30fe144161e5f0d8d51196c527bc"
   integrity sha512-V3wD15YHfHz6y0KdhYFjyy9vWtEVALT9UrxfN3zqlI6dMioHnJrqOYfyPKol3oqrnCM9uwkcdCwkJ0WUcbLMTQ==
 
-ajv-formats@~2.1.0:
+ajv-formats@~2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
   integrity sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==
@@ -871,10 +863,20 @@ ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.0, ajv@^8.17.1:
+ajv@^8.0.0:
   version "8.17.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.17.1.tgz#37d9a5c776af6bc92d7f4f9510eba4c0a60d11a6"
   integrity sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    fast-uri "^3.0.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
+
+ajv@^8.18.0:
+  version "8.20.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.20.0.tgz#304b3636add88ba7d936760dd50ece006dea95f9"
+  integrity sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==
   dependencies:
     fast-deep-equal "^3.1.3"
     fast-uri "^3.0.1"
@@ -2105,11 +2107,6 @@ etag@~1.8.1:
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
-event-target-shim@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
-  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
-
 events@^3.2.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/events/-/events-3.3.0.tgz"
@@ -2134,6 +2131,11 @@ expand-template@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz"
   integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
+
+expr-eval-fork@^3.0.1:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/expr-eval-fork/-/expr-eval-fork-3.0.3.tgz#82a3291db3835af9dfe05f519e4901f2b72219fb"
+  integrity sha512-BhC+hbc5lIVjygr840n5DEkW3MQq7H9o+mc1/N7Z5uIiCFVyESLL5DIE7LNq4CYUNxy+XjA+3jRrL/h0Kt2xcg==
 
 express@^4.17.1:
   version "4.21.1"
@@ -3099,7 +3101,7 @@ js-yaml@3.14.0, js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-jsep@^1.2.0, jsep@^1.3.6, jsep@^1.4.0:
+jsep@^1.2.0, jsep@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/jsep/-/jsep-1.4.0.tgz#19feccbfa51d8a79f72480b4b8e40ce2e17152f0"
   integrity sha512-B7qPcEVE3NVkmSJbaYxvv4cHkVW7DQsZz13pUMrfS8z8Q/BuShN+gcTXrUlPiGqM2/t/EEaI030bpxMqY8gMlw==
@@ -3129,7 +3131,16 @@ jsonc-parser@~2.2.1:
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-2.2.1.tgz#db73cd59d78cce28723199466b2a03d1be1df2bc"
   integrity sha512-o6/yDBYccGvTz1+QFevz6l6OBZ2+fMVu2JZ9CIhzsYRX4mjaK5IyX9eldUdCmga16zlgQxyrj5pt9kzuj2C02w==
 
-jsonpath-plus@10.2.0, "jsonpath-plus@^6.0.1 || ^10.1.0":
+jsonpath-plus@^10.3.0:
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/jsonpath-plus/-/jsonpath-plus-10.4.0.tgz#73cf545c231afda21452150b7a2a58e48e109702"
+  integrity sha512-T92WWatJXmhBbKsgH/0hl+jxjdXrifi5IKeMY02DWggRxX0UElcbVzPlmgLTbvsPeW1PasQ6xE2Q75stkhGbsA==
+  dependencies:
+    "@jsep-plugin/assignment" "^1.3.0"
+    "@jsep-plugin/regex" "^1.0.4"
+    jsep "^1.4.0"
+
+"jsonpath-plus@^6.0.1 || ^10.1.0":
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/jsonpath-plus/-/jsonpath-plus-10.2.0.tgz#84d680544d9868579cc7c8f59bbe153a5aad54c4"
   integrity sha512-T9V+8iNYKFL2n2rF+w02LBOT2JjDnTjioaNFrxRy0Bv1y/hNsqR/EBK7Ojy2ythRHwmz2cRIls+9JitQGZC/sw==
@@ -3218,10 +3229,15 @@ lodash.values@^4.3.0:
   resolved "https://registry.npmjs.org/lodash.values/-/lodash.values-4.3.0.tgz"
   integrity sha1-o6bCsOvsxcLLocF+bmIP6BtT00c=
 
-lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21, lodash@~4.17.21:
+lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+lodash@^4.18.1:
+  version "4.18.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.18.1.tgz#ff2b66c1f6326d59513de2407bf881439812771c"
+  integrity sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==
 
 log-symbols@4.0.0:
   version "4.0.0"
@@ -3339,10 +3355,17 @@ minimatch@3.0.4, minimatch@^3.0.3:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@3.1.2, minimatch@^3.0.4, minimatch@^3.1.1:
+minimatch@^3.0.4, minimatch@^3.1.1:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
+  dependencies:
+    brace-expansion "^1.1.7"
+
+minimatch@^3.1.4:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.5.tgz#580c88f8d5445f2bd6aa8f3cadefa0de79fbd69e"
+  integrity sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==
   dependencies:
     brace-expansion "^1.1.7"
 
@@ -3482,7 +3505,7 @@ node-addon-api@^4.3.0:
   resolved "https://registry.npmjs.org/node-addon-api/-/node-addon-api-4.3.0.tgz"
   integrity sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==
 
-node-fetch@^2.6.0, node-fetch@^2.6.7:
+node-fetch@^2.6.0, node-fetch@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
   integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
@@ -4083,6 +4106,13 @@ rollup@~2.79.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
+rollup@~2.80.0:
+  version "2.80.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.80.0.tgz#a82efc15b748e986a7c76f0f771221b1fa108a2c"
+  integrity sha512-cIFJOD1DESzpjOBl763Kp1AH7UE/0fcdHe6rZXUdQ9c50uvgigvW97u3IcSeBwOkgqL/PXPBktBCh0KEu5L8XQ==
+  optionalDependencies:
+    fsevents "~2.3.2"
+
 run-parallel@^1.1.9:
   version "1.1.9"
   resolved "https://registry.npmjs.org/run-parallel/-/run-parallel-1.1.9.tgz"
@@ -4290,13 +4320,6 @@ simple-concat@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz"
   integrity sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==
-
-simple-eval@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/simple-eval/-/simple-eval-1.0.1.tgz#f91fc2b1583b7f5b972cdc088b769880087120a5"
-  integrity sha512-LH7FpTAkeD+y5xQC4fzS+tFtaNlvt3Ib1zKzvhjv/Y+cioV4zIuw4IZr2yhRLu67CWL7FR9/6KXKnjRoZTvGGQ==
-  dependencies:
-    jsep "^1.3.6"
 
 simple-get@^4.0.0:
   version "4.0.1"

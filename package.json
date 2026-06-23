@@ -19,7 +19,7 @@
           "type": "boolean"
         },
         "spotlight.rulesetFile": {
-          "description": "Location of the ruleset file to use when validating. If omitted, the default is a .spectral.yml/.spectral.json in the same folder as the document being validated. Paths are relative to the workspace. This can also be a remote HTTP url.",
+          "description": "Location of the ruleset file to use when validating. If omitted, the default is a .spotlight.yml/.spotlight.json in the same folder as the document being validated. Paths are relative to the workspace. This can also be a remote HTTP url.",
           "scope": "resource",
           "type": "string"
         },
@@ -108,7 +108,7 @@
     "webpack-cli": "^4.9.2"
   },
   "resolutions": {
-    "@stoplight/spectral-core": "^1.19.4"
+    "@spotlight-rules/spotlight-core": "^1.0.0"
   },
   "displayName": "Spotlight",
   "engines": {
@@ -150,7 +150,7 @@
     "test": "mocha -r ts-node/register \"./+(client|server)/__tests__/unit/**/*.test.ts\"",
     "test:e2e": "cross-env CI=true CHAI_JEST_SNAPSHOT_UPDATE_ALL=false ts-node ./client/src/__tests__/e2e/index.ts"
   },
-  "version": "1.1.4",
+  "version": "1.0.0",
   "workspaces": {
     "packages": [
       "client",

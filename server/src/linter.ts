@@ -2,22 +2,20 @@
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import {
   IRuleResult,
-  // The linter engine is upstream Spectral; we alias its class to the Spotlight
-  // brand name used throughout this extension.
-  Spectral as Spotlight,
-  Document as SpectralDocument,
+  Spotlight,
+  Document as SpotlightDocument,
   Ruleset,
-} from '@stoplight/spectral-core';
+} from '@spotlight-rules/spotlight-core';
 import { URI } from 'vscode-uri';
-import * as Parsers from '@stoplight/spectral-parsers';
+import * as Parsers from '@spotlight-rules/spotlight-parsers';
 import { createResolveHttp, resolveFile } from '@stoplight/json-ref-readers';
 import { ICache } from '@stoplight/json-ref-resolver/types';
 import { Resolver, Cache } from '@stoplight/json-ref-resolver';
-import { runtime } from '@stoplight/spectral-ruleset-bundler/presets/runtime';
-import { commonjs } from '@stoplight/spectral-ruleset-bundler/plugins/commonjs';
-import { stdin } from '@stoplight/spectral-ruleset-bundler/plugins/stdin';
-import type { IO } from '@stoplight/spectral-ruleset-bundler';
-import { migrateRuleset } from '@stoplight/spectral-ruleset-migrator';
+import { runtime } from '@spotlight-rules/spotlight-ruleset-bundler/presets/runtime';
+import { commonjs } from '@spotlight-rules/spotlight-ruleset-bundler/plugins/commonjs';
+import { stdin } from '@spotlight-rules/spotlight-ruleset-bundler/plugins/stdin';
+import type { IO } from '@spotlight-rules/spotlight-ruleset-bundler';
+import { migrateRuleset } from '@spotlight-rules/spotlight-ruleset-migrator';
 import * as path from '@stoplight/path';
 import { RemoteConsole, TextDocuments } from 'vscode-languageserver';
 import * as URIjs from 'urijs';
@@ -67,13 +65,13 @@ export function createHttpAndFileResolver(
   });
 }
 
-const buildSpectralInstance = (documents: TextDocuments<TextDocument>, uriCache: ICache, console: RemoteConsole): Spotlight => {
-  const spectral = new Spotlight({
+const buildSpotlightInstance = (documents: TextDocuments<TextDocument>, uriCache: ICache, console: RemoteConsole): Spotlight => {
+  const spotlight = new Spotlight({
     resolver: createHttpAndFileResolver(documents, uriCache, console),
   });
 
 
-  return spectral;
+  return spotlight;
 };
 
 /**
@@ -81,12 +79,12 @@ const buildSpectralInstance = (documents: TextDocuments<TextDocument>, uriCache:
  * content in a manner similar to the Spotlight CLI.
  */
 export class Linter {
-  private readonly spectral: Spotlight;
+  private readonly spotlight: Spotlight;
   private readonly cache: ICache;
 
   constructor(documents: TextDocuments<TextDocument>, console: RemoteConsole) {
     this.cache = new Cache();
-    this.spectral = buildSpectralInstance(documents, this.cache, console);
+    this.spotlight = buildSpotlightInstance(documents, this.cache, console);
   }
 
   /**
@@ -100,10 +98,10 @@ export class Linter {
     // instance here. If so, we may need to store a Spotlight instance per
     // document rather than using a single shared one via Linter.
     if (ruleset) {
-      this.spectral.setRuleset(ruleset);
+      this.spotlight.setRuleset(ruleset);
     } else {
       // No ruleset, so clear everything out.
-      this.spectral.setRuleset({
+      this.spotlight.setRuleset({
         rules: {},
       });
     }
@@ -122,14 +120,14 @@ export class Linter {
     // matters when parsing the relative links in references anyway.
     const file = URI.parse(document.uri).fsPath;
 
-    const doc = new SpectralDocument(
+    const doc = new SpotlightDocument(
       text,
       Parsers.Yaml,
       file,
     );
 
     this.cache.purge();
-    return this.spectral.run(doc, { ignoreUnknownFormat: true });
+    return this.spotlight.run(doc, { ignoreUnknownFormat: true });
   }
 
   static async loadRuleset(filepath: string, io: IO): Promise<{ dependencies: string[]; ruleset: Ruleset }> {
@@ -137,7 +135,7 @@ export class Linter {
     const plugins: Plugin[] = [...runtime(io), commonjs()];
 
     if (/\.(json|ya?ml)$/.test(path.extname(filepath))) {
-      rulesetFile = path.join(path.dirname(rulesetFile), '.spectral.js');
+      rulesetFile = path.join(path.dirname(rulesetFile), '.spotlight.js');
       plugins.unshift(stdin(await migrateRuleset(filepath, { format: 'esm', ...io }), rulesetFile));
     }
 

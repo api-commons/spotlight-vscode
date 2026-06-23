@@ -6,23 +6,23 @@ import {
   PublishDiagnosticsParams,
 } from 'vscode-languageserver';
 import { URI } from 'vscode-uri';
-import type { ISpectralDiagnostic } from '@stoplight/spectral-core';
-import { DiagnosticSeverity as SpectralDiagnosticSeverity } from '@stoplight/types';
+import type { ISpotlightDiagnostic } from '@spotlight-rules/spotlight-core';
+import { DiagnosticSeverity as SpotlightDiagnosticSeverity } from '@stoplight/types';
 
 /**
  * Converts a Spotlight rule violation severity into a VS Code diagnostic severity.
  * @param {DiagnosticSeverity} severity - The Spotlight diagnostic severity to convert.
  * @return {DiagnosticSeverity} The converted severity for a VS Code diagnostic.
  */
-function convertSeverity(severity: SpectralDiagnosticSeverity): DiagnosticSeverity {
+function convertSeverity(severity: SpotlightDiagnosticSeverity): DiagnosticSeverity {
   switch (severity) {
-    case SpectralDiagnosticSeverity.Error:
+    case SpotlightDiagnosticSeverity.Error:
       return DiagnosticSeverity.Error;
-    case SpectralDiagnosticSeverity.Warning:
+    case SpotlightDiagnosticSeverity.Warning:
       return DiagnosticSeverity.Warning;
-    case SpectralDiagnosticSeverity.Information:
+    case SpotlightDiagnosticSeverity.Information:
       return DiagnosticSeverity.Information;
-    case SpectralDiagnosticSeverity.Hint:
+    case SpotlightDiagnosticSeverity.Hint:
       return DiagnosticSeverity.Hint;
     default:
       return DiagnosticSeverity.Error;
@@ -31,10 +31,10 @@ function convertSeverity(severity: SpectralDiagnosticSeverity): DiagnosticSeveri
 
 /**
  * Converts a Spotlight rule violation to a VS Code diagnostic.
- * @param {ISpectralDiagnostic} problem - The Spotlight rule result to convert to a VS Code diagnostic message.
+ * @param {ISpotlightDiagnostic} problem - The Spotlight rule result to convert to a VS Code diagnostic message.
  * @return {Diagnostic} The converted VS Code diagnostic to send to the client.
  */
-export function makeDiagnostic(problem: ISpectralDiagnostic): Diagnostic {
+export function makeDiagnostic(problem: ISpotlightDiagnostic): Diagnostic {
   return {
     range: {
       start: {
@@ -53,8 +53,8 @@ export function makeDiagnostic(problem: ISpectralDiagnostic): Diagnostic {
   };
 }
 
-export function makePublishDiagnosticsParams(rootDocumentUri: string, knownDependencieUris: string[], problems: ISpectralDiagnostic[]): PublishDiagnosticsParams[] {
-  const grouped = problems.reduce<Record<string, ISpectralDiagnostic[]>>((grouped, problem) => {
+export function makePublishDiagnosticsParams(rootDocumentUri: string, knownDependencieUris: string[], problems: ISpotlightDiagnostic[]): PublishDiagnosticsParams[] {
+  const grouped = problems.reduce<Record<string, ISpotlightDiagnostic[]>>((grouped, problem) => {
     if (problem.source === undefined) {
       return grouped;
     }

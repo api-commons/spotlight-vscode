@@ -1,14 +1,16 @@
 # Spotlight Linter for VS Code
 
-> **Spotlight for VS Code** is an [API Commons](https://github.com/api-commons)
-> fork of [Stoplight's vscode-spectral](https://github.com/stoplightio/vscode-spectral).
-> It is the editor companion to [spotlight-cli](https://github.com/api-commons/spotlight-cli)
-> (the linter) and [spotlight-spec](https://github.com/api-commons/spotlight-spec)
-> (the standalone ruleset specification). The extension still embeds the upstream
-> Spectral linter engine — see [FORK.md](./FORK.md) for what was rebranded and
-> what was kept for compatibility.
+> **Spotlight for VS Code** originated as a fork of
+> [Stoplight's vscode-spectral](https://github.com/stoplightio/vscode-spectral)
+> and is released as an independent 1.0 under
+> [API Commons](https://github.com/api-commons). It is the editor companion to
+> [spotlight-cli](https://github.com/api-commons/spotlight-cli) (the linter) and
+> [spotlight-spec](https://github.com/api-commons/spotlight-spec) (the standalone
+> ruleset specification), and embeds the published
+> [`@spotlight-rules/spotlight`](https://www.npmjs.com/package/@spotlight-rules/spotlight-core)
+> engine. See [FORK.md](./FORK.md) for provenance and attribution.
 
-The Spotlight VS Code extension brings API linting — powered by the Spectral
+The Spotlight VS Code extension brings API linting — powered by the Spotlight
 engine it embeds — to your favorite editor.
 
 It is a flexible object linter with out of the box support for
@@ -20,7 +22,7 @@ v2 and v3.
 
 - Lint-on-save
 - Lint-on-type
-- Custom ruleset support (`.spectral.json`, `.spectral.yaml`, `.spectral.yml` or `.spectral.js`)
+- Custom ruleset support (`.spotlight.json`, `.spotlight.yaml`, `.spotlight.yml` or `.spotlight.js`)
 - Intellisense for custom ruleset editing
 - Support for JSON and YAML input
 
@@ -49,7 +51,7 @@ The extension ID is `api-commons.spotlight`.
 This extension contributes the following settings:
 
 - `spotlight.enable`: Controls whether or not Spotlight is enabled.
-- `spotlight.rulesetFile`: Location of the ruleset file to use when validating. If omitted, the default is a `.spectral.(json|yaml|yml)` in the same folder as the document being validated. Paths are relative to the workspace. This can also be a remote HTTP url.
+- `spotlight.rulesetFile`: Location of the ruleset file to use when validating. If omitted, the default is a `.spotlight.(json|yaml|yml)` in the same folder as the document being validated. Paths are relative to the workspace. This can also be a remote HTTP url.
 - `spotlight.run`: Run the linter on save (`onSave`) or as you type (`onType`).
 - `spotlight.validateFiles`: An array of file globs (e.g., `**/*.yaml`) which should be validated by Spotlight. If language identifiers are also specified, the file must match both in order to be validated. You can also use negative file globs (e.g., `!**/package.json`) here to exclude files.
 - `spotlight.validateLanguages`: An array of language IDs (e.g., `yaml`, `json`) which should be validated by Spotlight. If file globs are also specified, the file must match both in order to be validated.
