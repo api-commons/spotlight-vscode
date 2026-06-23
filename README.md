@@ -8,10 +8,10 @@
 > Spectral linter engine — see [FORK.md](./FORK.md) for what was rebranded and
 > what was kept for compatibility.
 
-The Spotlight VS Code extension brings the power of the Spectral linter to your
-favorite editor.
+The Spotlight VS Code extension brings API linting — powered by the Spectral
+engine it embeds — to your favorite editor.
 
-Spectral is a flexible object linter with out of the box support for
+It is a flexible object linter with out of the box support for
 [OpenAPI](https://openapis.org/) v2 and v3, [Arazzo](https://www.openapis.org/arazzo),
 [JSON Schema](https://json-schema.org/), and [AsyncAPI](https://www.asyncapi.com/)
 v2 and v3.
