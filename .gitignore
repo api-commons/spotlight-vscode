@@ -1,0 +1,10 @@
+artifacts/
+node_modules/
+dist/
+.idea/
+.vscode-test/
+
+# build outputs
+*.tsbuildinfo
+client/dist/
+server/dist/

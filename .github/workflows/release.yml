@@ -1,0 +1,26 @@
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+    name: Release and Publish
+    runs-on: ubuntu-latest
+    env:
+      VSCE_TOKEN: ${{secrets.VSCE_TOKEN}}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+
+      - name: Yarn install
+        run: yarn install
+
+      - name: Build, lint, test and package
+        run: node make.js package
+
+      - name: Publish to VSCode extensions store
+        run: node make.js publish -- ${{env.VSCE_TOKEN}}

@@ -1,0 +1,22 @@
+Spotlight for VS Code
+Copyright 2026 API Commons
+
+This product is a fork of the Spectral VS Code extension.
+
+  vscode-spectral
+  Copyright Stoplight, Inc.
+  https://github.com/stoplightio/vscode-spectral
+  Licensed under the Apache License, Version 2.0.
+
+The extension embeds the Spectral linter engine (the @stoplight/spectral-*
+packages), also Copyright Stoplight, Inc. and licensed under the Apache License,
+Version 2.0.
+
+This product includes software developed by Stoplight, Inc. and the Spectral
+contributors. The original work is licensed under the Apache License, Version
+2.0 (the "License"); you may obtain a copy of the License in the accompanying
+LICENSE.txt file.
+
+Changes made by API Commons are documented in FORK.md. In accordance with
+Section 4 of the Apache License, this NOTICE file is retained and the original
+copyright attribution to Stoplight, Inc. is preserved.
