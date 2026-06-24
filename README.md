@@ -1,3 +1,5 @@
+<p align="center"><a href="https://spotlight-rules.com"><img src="https://raw.githubusercontent.com/api-commons/spotlight-vscode/main/spotlight-rules-logo.png" alt="Spotlight Rules" height="90"></a></p>
+
 # Spotlight Linter for VS Code
 
 > **Spotlight for VS Code** originated as a fork of
@@ -68,3 +70,7 @@ authors and contributors, including:
 
 [Apache-2.0](LICENSE.txt). Derived from Stoplight's vscode-spectral (Apache-2.0);
 attribution and provenance are recorded in [NOTICE](./NOTICE) and [FORK.md](./FORK.md).
+
+---
+
+Part of [Spotlight Rules](https://spotlight-rules.com) — a project of [API Evangelist](https://apievangelist.com), maintained openly under [API Commons](https://apicommons.org).
