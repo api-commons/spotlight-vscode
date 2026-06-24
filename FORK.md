@@ -57,3 +57,11 @@ aliases — consistent with the rest of the Spotlight stack.
 
 - **2026-06-23** — Initial import and rebrand. The extension icon (`icon.png`)
   and screenshots are still the upstream artwork; replacing them is future work.
+
+## License compliance (Apache-2.0)
+
+`LICENSE.txt` (Apache-2.0) is retained; changes are documented in this `FORK.md`
+(§4(b)); upstream copyright notices are preserved (§4(c)); upstream
+`vscode-spectral` ships no `NOTICE` file, so the `NOTICE` here is voluntary
+attribution (§4(d)). The extension was renamed Spectral → Spotlight; no upstream
+trademarks are used (§6).
