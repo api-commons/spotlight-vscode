@@ -206,6 +206,8 @@ function preparePackageStructure() {
   cp(path.join(__dirname, 'CHANGELOG.md'), outputPath.dist);
   cp(path.join(__dirname, 'LICENSE.txt'), outputPath.dist);
   cp(path.join(__dirname, 'icon.png'), outputPath.dist);
+  // Bundled JSON Schema for ruleset files (contributes.jsonValidation).
+  cp('-R', path.join(__dirname, 'schemas'), outputPath.dist);
 
   cp(path.join(__dirname, 'client', 'dist', 'index.js'), distClient);
   cp(path.join(__dirname, 'server', 'dist', 'index.js'), distServer);

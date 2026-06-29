@@ -5,7 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - API Commons fork
+## [1.1.0] - 2026-06-29
+
+### Added
+
+- **Ruleset schema in the editor.** Editing a `*.spotlight.json` or
+  `spotlight-ruleset.json` file now gets JSON Schema completion, hovers, and
+  validation from the bundled
+  [spotlight-spec](https://github.com/api-commons/spotlight-spec) ruleset schema
+  (`contributes.jsonValidation`). This complements the linting the extension
+  already performs. YAML rulesets (`*.spotlight.yaml`/`.yml`) get the same schema
+  via the SchemaStore listing when the YAML extension is installed.
+
+## [1.0.0] - 2026-06-29 — API Commons fork
 
 ### Changed
 
@@ -15,8 +27,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   settings namespace, the `spotlight.showOutputChannel` command, the language
   client/diagnostics, and the LSP notification methods. The linter engine remains
   upstream Spectral (aliased). See [FORK.md](./FORK.md) for full details.
+- Published to the VS Code Marketplace and Open VSX as `spotlightrules.spotlight`.
 
-## [1.0.0] - 2022-04-21
+## [1.0.0] - 2022-04-21 — upstream vscode-spectral
 
 ### Added
 

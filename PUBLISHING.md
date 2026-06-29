@@ -74,3 +74,9 @@ Verify: <https://open-vsx.org/extension/spotlightrules/spotlight>
   `@vscode/vsce` via `npx` (used above).
 - `client/src/*.js` and `server/src/*.js` are compiled TypeScript output and are
   **git-ignored** — the entry points are the `.ts` files. Never commit the `.js`.
+- `schemas/spotlight-ruleset.schema.json` is a vendored copy of the canonical
+  schema in [spotlight-spec](https://github.com/api-commons/spotlight-spec)
+  (`schema/v1/spotlight-ruleset.schema.json`), wired to ruleset files via
+  `contributes.jsonValidation`. When the spec schema changes, refresh it:
+  `cp ../spotlight-spec/schema/v1/spotlight-ruleset.schema.json schemas/` and bump
+  the extension version.

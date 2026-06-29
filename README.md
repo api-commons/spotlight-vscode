@@ -25,7 +25,9 @@ v2 and v3.
 - Lint-on-save
 - Lint-on-type
 - Custom ruleset support (`.spotlight.json`, `.spotlight.yaml`, `.spotlight.yml` or `.spotlight.js`)
-- Intellisense for custom ruleset editing
+- Schema-backed IntelliSense when editing a ruleset — completion, hovers, and validation
+  from the bundled [spotlight-spec](https://github.com/api-commons/spotlight-spec) JSON Schema
+  (also on [SchemaStore](https://www.schemastore.org/) for `.spotlight.yaml`/`.yml`)
 - Support for JSON and YAML input
 
 ![screenshot](assets/screenshot1.png)
