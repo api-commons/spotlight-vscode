@@ -1,2 +1,4 @@
 node_modules/
 dist/
+client/src/*.js
+server/src/*.js

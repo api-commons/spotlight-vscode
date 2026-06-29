@@ -8,3 +8,9 @@ dist/
 *.tsbuildinfo
 client/dist/
 server/dist/
+
+# compiled TS output must never be committed back into src (entry points are .ts)
+client/src/*.js
+client/src/*.js.map
+server/src/*.js
+server/src/*.js.map
