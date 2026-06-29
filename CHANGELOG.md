@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Forked from [stoplightio/vscode-spectral](https://github.com/stoplightio/vscode-spectral)
   as **Spotlight for VS Code** under the API Commons organization. Rebranded the
-  extension identity (`spotlight`, publisher `api-commons`), the `spotlight.*`
+  extension identity (`spotlight`, publisher `spotlightrules`), the `spotlight.*`
   settings namespace, the `spotlight.showOutputChannel` command, the language
   client/diagnostics, and the LSP notification methods. The linter engine remains
   upstream Spectral (aliased). See [FORK.md](./FORK.md) for full details.

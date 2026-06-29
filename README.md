@@ -46,7 +46,7 @@ node make.js package   # webpack-builds client + server and runs `vsce package` 
 code --install-extension artifacts/<the-generated>.vsix
 ```
 
-The extension ID is `api-commons.spotlight`.
+The extension ID is `spotlightrules.spotlight`.
 
 ## Extension Settings
 

@@ -19,9 +19,9 @@ It is the editor companion to the API Commons "Spotlight" stack:
 ## What was rebranded
 
 - **Extension identity:** `name` (`spectral` → `spotlight`), `displayName`
-  (`Spectral` → `Spotlight`), `publisher` (`stoplight` → `api-commons`), and the
+  (`Spectral` → `Spotlight`), `publisher` (`stoplight` → `spotlightrules`), and the
   homepage/bugs/repository URLs. The extension ID is therefore now
-  `api-commons.spotlight`.
+  `spotlightrules.spotlight`.
 - **Settings namespace:** all `spectral.*` configuration keys →
   `spotlight.*` (`spotlight.enable`, `spotlight.rulesetFile`, `spotlight.run`,
   `spotlight.trace.server`, `spotlight.validateFiles`,

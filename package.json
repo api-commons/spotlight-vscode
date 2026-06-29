@@ -139,7 +139,7 @@
   "main": "./client/index.js",
   "name": "spotlight",
   "private": true,
-  "publisher": "api-commons",
+  "publisher": "spotlightrules",
   "repository": {
     "type": "git",
     "url": "https://github.com/api-commons/spotlight-vscode"
